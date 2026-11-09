@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KimTech Logistics | Move Smarter. Ship Better.</title>
+<meta name="description" content="KimTech Logistics: reliable air, ocean and land freight, customs clearance and real-time shipment tracking.">
+<meta property="og:title" content="KimTech Logistics | Move Smarter. Ship Better.">
+<meta property="og:description" content="Air, ocean and land freight with real-time tracking.">
+<meta property="og:type" content="website">
+<!-- TODO: add <meta property="og:image" content="YOUR-IMAGE-URL"> and <link rel="icon" href="favicon.ico"> -->
+<!-- PRODUCTION: replace this CDN script with a Tailwind CLI build -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    navy: { 50:'#F1F5F9',100:'#E2E8F0',200:'#CBD5E1',300:'#94A3B8',400:'#64748B',500:'#475569',600:'#334155',700:'#1E293B',800:'#0F2038',900:'#0A1727',950:'#06101B' },
+    brand: { DEFAULT:'#FF6B00', 400:'#FF8A33', 500:'#FF6B00', 600:'#E05E00', 700:'#B84C00' }
+  },
+  fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+}}}
+</script>
+<style>
+  section[id], footer[id] { scroll-margin-top: 80px; }
+  .hero-bg { background: linear-gradient(135deg, rgba(6,16,27,.88), rgba(15,32,56,.78)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat; }
+  .banner-bg { background: linear-gradient(135deg, rgba(10,23,39,.95), rgba(6,16,27,.9)), url('https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-brand selection:text-white">
+
+<header class="fixed top-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#home" class="flex items-center space-x-3" aria-label="KimTech Logistics home">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand to-amber-500 flex items-center justify-center shadow-md"><i class="fa-solid fa-cube text-white text-lg" aria-hidden="true"></i></div>
+      <div><span class="text-2xl font-extrabold tracking-tight text-navy-950">Kim<span class="text-brand">Tech</span></span><span class="block text-[10px] tracking-widest text-slate-600 uppercase font-bold">Logistics</span></div>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700" aria-label="Main">
+      <a href="#home" data-nav class="hover:text-brand">Home</a>
+      <a href="#services" data-nav class="hover:text-brand">Services</a>
+      <a href="#about" data-nav class="hover:text-brand">About</a>
+      <a href="#tracking" data-nav class="hover:text-brand">Tracking</a>
+      <a href="#contact" data-nav class="hover:text-brand">Contact</a>
+    </nav>
+    <div class="flex items-center space-x-3">
+      <button data-quote class="bg-brand hover:bg-brand-600 text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-brand/25 transition">Get a Quote</button>
+      <button id="menu-btn" class="md:hidden text-slate-700 p-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><i class="fa-solid fa-bars text-xl" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+    <a href="#home" class="block font-medium py-1">Home</a>
+    <a href="#services" class="block font-medium py-1">Services</a>
+    <a href="#about" class="block font-medium py-1">About</a>
+    <a href="#tracking" class="block font-medium py-1">Tracking</a>
+    <a href="#contact" class="block font-medium py-1">Contact</a>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero-bg text-white pt-32 pb-20 lg:pt-40 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand/20 border border-brand/40 text-brand-400 text-xs font-bold uppercase tracking-wider"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Global logistics solutions</span></div>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">Your Cargo.<br><span class="text-brand">Our Priority.</span></h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">Reliable, fast and secure shipping for businesses worldwide. Move Smarter. Ship Better.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+          <button data-quote class="bg-brand hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand/30 transition">Get a Quote</button>
+          <a href="#tracking" class="bg-white/10 hover:bg-white/20 border border-white/20 font-bold px-8 py-4 rounded-xl transition text-center"><i class="fa-solid fa-location-arrow mr-2" aria-hidden="true"></i>Track Shipment</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="bg-white/10 backdrop-blur-md p-3 rounded-3xl border border-white/20 shadow-2xl relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=70" alt="Container ship at sea carrying stacked cargo containers" width="800" height="320" class="w-full h-80 object-cover rounded-2xl">
+          <div class="absolute bottom-6 left-6 right-6 bg-navy-950/90 p-4 rounded-xl border border-white/10 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-lg bg-brand flex items-center justify-center"><i class="fa-solid fa-ship" aria-hidden="true"></i></div>
+              <div><div class="text-xs text-slate-300">Example vessel status</div><div class="text-sm font-bold">In transit</div></div>
+            </div>
+            <span class="text-xs font-bold text-emerald-300 bg-emerald-500/20 px-3 py-1 rounded-full">On time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15" id="trust-bar"></div>
+  </div>
+</section>
+
+<!-- NOTE: stats below are placeholders. Replace with figures you can verify, or remove. -->
+<section class="py-20 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div class="lg:w-1/2 space-y-4 text-center lg:text-left">
+      <div class="text-brand-700 text-xs font-bold uppercase tracking-widest">Our global reach</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">Connecting Businesses Across the World</h2>
+      <p class="text-slate-600 text-sm leading-relaxed">With a strong international network, we move your cargo to every corner of the globe with speed, precision and efficiency.</p>
+    </div>
+    <dl class="lg:w-1/2 grid grid-cols-2 sm:grid-cols-4 gap-6 w-full text-center" id="stats"></dl>
+  </div>
+</section>
+
+<section id="services" class="py-24 bg-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-16">
+      <div class="text-brand-700 text-xs font-bold uppercase tracking-widest mb-2">Our services</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">Logistics Solutions for Every Need</h2>
+      <p class="text-slate-600 text-sm mt-1">From local deliveries to global shipments, flexible and cost-effective.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid"></div>
+  </div>
+</section>
+
+<section class="banner-bg py-24 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-7 space-y-6">
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">Smarter Logistics.<br>Stronger Business.</h2>
+      <p class="text-slate-300 leading-relaxed">We combine global reach with local expertise so your shipments arrive safely, on time and within budget.</p>
+      <ul class="space-y-3 text-sm font-medium">
+        <li class="flex items-center space-x-3"><span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center text-xs"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span>Global network with priority airline and shipping berths</span></li>
+        <li class="flex items-center space-x-3"><span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center text-xs"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span>Real-time tracking with live status updates</span></li>
+        <li class="flex items-center space-x-3"><span class="w-6 h-6 rounded-full bg-brand flex items-center justify-center text-xs"><i class="fa-solid fa-check" aria-hidden="true"></i></span><span>Transparent pricing, itemised in every quote</span></li>
+      </ul>
+    </div>
+    <div class="lg:col-span-5">
+      <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 space-y-6">
+        <h3 class="text-2xl font-bold">Ready when you are</h3>
+        <p class="text-slate-300 text-sm">Tell us what you ship and where. We reply with a tailored proposal.</p>
+        <button data-quote class="w-full bg-brand hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition">Request a custom proposal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tracking" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+      <div class="text-brand-700 text-xs font-bold uppercase tracking-widest">Track your cargo</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">Track Your Cargo in Real Time</h2>
+      <p class="text-slate-600 text-sm">Enter a tracking ID. Demo IDs: <button class="underline font-mono" data-demo="KT-8942-X">KT-8942-X</button>, <button class="underline font-mono" data-demo="KT-1001-A">KT-1001-A</button></p>
+    </div>
+    <div class="max-w-4xl mx-auto bg-slate-900 text-white p-6 sm:p-10 rounded-3xl shadow-2xl">
+      <form id="track-form" class="flex flex-col sm:flex-row gap-4 mb-8">
+        <label for="tracking-input" class="sr-only">Tracking ID</label>
+        <input type="text" id="tracking-input" value="KT-8942-X" placeholder="e.g. KT-8942-X" autocomplete="off" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-4 text-white placeholder-slate-400 focus:outline-none focus:border-brand font-mono text-sm">
+        <button type="submit" class="bg-brand hover:bg-brand-600 font-bold px-8 py-4 rounded-xl transition">Track shipment</button>
+      </form>
+      <div id="track-result" class="bg-slate-950 p-6 rounded-2xl border border-slate-800" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-24 bg-slate-100 border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=800&q=70" alt="Warehouse team checking pallets of cargo" width="800" height="420" class="rounded-3xl shadow-xl w-full h-[420px] object-cover">
+    </div>
+    <div class="lg:col-span-6 space-y-6">
+      <div class="text-brand-700 text-xs font-bold uppercase tracking-widest">About KimTech Logistics</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">More Than Just Shipping, We Build Connections.</h2>
+      <p class="text-slate-600 text-sm leading-relaxed">KimTech Logistics is a freight and logistics company dedicated to delivering your goods safely, efficiently and on time, with personalised support as you expand across borders.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200"><div class="font-bold text-navy-950 text-sm mb-1"><i class="fa-solid fa-shield-halved text-brand mr-2" aria-hidden="true"></i>Cargo protection</div><p class="text-xs text-slate-600">Insurance options on every route.</p></div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200"><div class="font-bold text-navy-950 text-sm mb-1"><i class="fa-solid fa-bolt text-brand mr-2" aria-hidden="true"></i>Fast clearance</div><p class="text-xs text-slate-600">Streamlined customs documentation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTE: these testimonials are PLACEHOLDERS. Replace with real, permissioned reviews before launch. -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+      <div class="text-brand-700 text-xs font-bold uppercase tracking-widest">What our clients say</div>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">Trusted by Businesses Worldwide</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8" id="reviews"></div>
+  </div>
+</section>
+
+<section class="py-16 bg-navy-950 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-r from-navy-900 to-navy-800 p-8 sm:p-12 rounded-3xl border border-brand/30 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 text-center lg:text-left">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Get a Free Quote Today</h2>
+        <p class="text-slate-300 text-sm max-w-xl">Contact us for a custom logistics quotation.</p>
+      </div>
+      <button data-quote class="bg-brand hover:bg-brand-600 font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand/30 transition">Get a quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-slate-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950 mb-12">Logistics News & Updates</h2>
+    <div class="grid md:grid-cols-3 gap-8" id="news"></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact" class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+      <div class="space-y-4">
+        <span class="text-2xl font-extrabold text-white">Kim<span class="text-brand">Tech</span> <span class="text-xs tracking-widest uppercase text-slate-300">Logistics</span></span>
+        <p class="text-xs leading-relaxed">Freight services, shipment tracking and business growth. Move Smarter. Ship Better.</p>
+        <!-- TODO: replace # with your real social profile URLs -->
+        <div class="flex space-x-3">
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-brand"><i class="fa-brands fa-linkedin-in text-xs" aria-hidden="true"></i></a>
+          <a href="#" aria-label="X (Twitter)" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-brand"><i class="fa-brands fa-twitter text-xs" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-brand"><i class="fa-brands fa-facebook-f text-xs" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div><h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick links</h3>
+        <ul class="space-y-2.5 text-xs"><li><a href="#home" class="hover:text-brand">Home</a></li><li><a href="#services" class="hover:text-brand">Services</a></li><li><a href="#about" class="hover:text-brand">About us</a></li><li><a href="#tracking" class="hover:text-brand">Tracking</a></li></ul></div>
+      <div><h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Our services</h3>
+        <ul class="space-y-2.5 text-xs"><li><a href="#services" class="hover:text-brand">Ocean freight</a></li><li><a href="#services" class="hover:text-brand">Air freight</a></li><li><a href="#services" class="hover:text-brand">Land transportation</a></li><li><a href="#services" class="hover:text-brand">Warehousing</a></li></ul></div>
+      <div><h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Contact us</h3>
+        <!-- TODO: replace placeholder address, phone and email -->
+        <ul class="space-y-3 text-xs">
+          <li><i class="fa-solid fa-location-dot text-brand mr-2" aria-hidden="true"></i>Your address here</li>
+          <li><i class="fa-solid fa-phone text-brand mr-2" aria-hidden="true"></i><a href="tel:+880123456789" class="hover:text-brand">+880 123 456 789</a></li>
+          <li><i class="fa-solid fa-envelope text-brand mr-2" aria-hidden="true"></i><a href="mailto:info@kimtechlogistics.com" class="hover:text-brand">info@kimtechlogistics.com</a></li>
+        </ul></div>
+    </div>
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-4">
+      <div>&copy; <span id="year">2026</span> KimTech Logistics. All rights reserved.</div>
+      <div class="flex space-x-6"><a href="/privacy" class="hover:text-white">Privacy Policy</a><a href="/terms" class="hover:text-white">Terms & Conditions</a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+  <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+    <button id="modal-close" class="absolute top-5 right-5 text-slate-600 hover:text-slate-900 w-10 h-10 rounded-full bg-slate-100" aria-label="Close quote form"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <div id="quote-form-wrap">
+      <h3 id="quote-title" class="text-2xl font-extrabold text-navy-950 mb-1">Request a Quote</h3>
+      <p class="text-slate-600 text-xs mb-6">Share your cargo details and we will email a quotation.</p>
+      <!-- Set data-endpoint to your Formspree / Netlify / API URL -->
+      <form id="quote-form" data-endpoint="https://formspree.io/f/YOUR_FORM_ID" class="space-y-4">
+        <div><label for="q-service" class="block text-xs font-semibold text-slate-700 mb-1">Service required</label>
+          <select id="q-service" name="service" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"><option>Air Freight</option><option>Ocean Freight</option><option>Land Transportation</option><option>Warehousing & Storage</option><option>Customs Clearance</option></select></div>
+        <div class="grid grid-cols-2 gap-4">
+          <div><label for="q-origin" class="block text-xs font-semibold text-slate-700 mb-1">Origin</label><input id="q-origin" name="origin" type="text" placeholder="e.g. Shanghai" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+          <div><label for="q-dest" class="block text-xs font-semibold text-slate-700 mb-1">Destination</label><input id="q-dest" name="destination" type="text" placeholder="e.g. New York" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div><label for="q-name" class="block text-xs font-semibold text-slate-700 mb-1">Your name</label><input id="q-name" name="name" type="text" placeholder="John Doe" required autocomplete="name" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+          <div><label for="q-email" class="block text-xs font-semibold text-slate-700 mb-1">Email address</label><input id="q-email" name="email" type="email" placeholder="john@company.com" required autocomplete="email" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+        </div>
+        <p id="quote-error" class="hidden text-sm text-red-600" role="alert">We could not send your request. Check your connection and try again.</p>
+        <button id="quote-submit" type="submit" class="w-full bg-brand hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition">Send quote request</button>
+      </form>
+    </div>
+    <div id="quote-success" class="hidden text-center py-8 space-y-4" tabindex="-1">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto text-2xl"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+      <h4 class="text-2xl font-bold text-navy-950">Request sent</h4>
+      <p class="text-slate-600 text-sm">We will email your quotation soon.</p>
+      <button id="success-close" class="bg-navy-950 text-white px-6 py-2.5 rounded-xl text-xs font-bold">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+$('#year').textContent = new Date().getFullYear();
+
+/* ---------- Content data (edit here) ---------- */
+const trust = [['fa-earth-americas','Worldwide shipping','Global network'],['fa-shield-halved','Safe & secure','Full cargo care'],['fa-clock','On-time delivery','Planned schedules'],['fa-headset','Support','We are here to help']];
+$('#trust-bar').innerHTML = trust.map(t=>`<div class="flex items-center space-x-3"><div class="w-10 h-10 rounded-full bg-brand/20 text-brand-400 flex items-center justify-center shrink-0"><i class="fa-solid ${t[0]}" aria-hidden="true"></i></div><div><div class="text-xs text-slate-300">${t[1]}</div><div class="text-sm font-bold">${t[2]}</div></div></div>`).join('');
+
+// PLACEHOLDER stats: replace with verifiable numbers or remove
+const stats = [['200+','Countries',1],['50+','Global partners',0],['15+','Years experience',1],['100K+','Shipments delivered',0]];
+$('#stats').innerHTML = stats.map(s=>`<div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm"><dd class="text-3xl font-extrabold ${s[2]?'text-brand-700':'text-navy-950'} mb-1">${s[0]}</dd><dt class="text-xs font-semibold text-slate-600 uppercase">${s[1]}</dt></div>`).join('');
+
+const services = [
+ ['Air Freight','Express','Fast, secure air cargo for time-critical shipments and charter needs.','Global coverage','photo-1436491865332-7a61a109cc05','Cargo aircraft on an airport apron'],
+ ['Ocean Freight','FCL / LCL','Cost-effective container shipping across major sea routes and ports.','Global coverage','photo-1494412574643-ff11b0a5c1c3','Container vessel leaving port'],
+ ['Land Transportation','FTL / LTL','Reliable domestic and cross-border trucking.','Local & international','photo-1601584115197-04ecc0da31d7','Freight truck on a highway'],
+ ['Warehousing & Storage','Secure hubs','Storage facilities with smart inventory control and distribution.','Inventory management','photo-1586528116311-ad8dd3c8310d','Warehouse aisle with stacked shelves'],
+ ['Shipment Tracking','Real-time','Portals giving your operations team 24/7 shipment visibility.','Live status updates','photo-1551288049-bebda4e38f71','Dashboard showing shipment analytics'],
+ ['Customs Clearance','Documentation','Brokerage, tariff classification and documentation handling.','Compliance support','photo-1454165804606-c3d57bc86b40','Customs paperwork and a laptop on a desk']
+];
+$('#services-grid').innerHTML = services.map((s,i)=>`<article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+ <div><div class="h-48 overflow-hidden relative"><img loading="lazy" width="600" height="192" src="https://images.unsplash.com/${s[4]}?auto=format&fit=crop&w=600&q=70" alt="${s[5]}" class="w-full h-full object-cover"><span class="absolute top-4 left-4 ${i%2?'bg-navy-950':'bg-brand-700'} text-white text-[11px] font-bold px-3 py-1 rounded-full">${s[1]}</span></div>
+ <div class="p-6"><h3 class="text-xl font-bold text-navy-950 mb-2">${s[0]}</h3><p class="text-slate-600 text-sm leading-relaxed">${s[2]}</p></div></div>
+ <div class="p-6 pt-4 flex items-center justify-between border-t border-slate-100"><span class="text-xs font-semibold text-slate-600">${s[3]}</span>
+ ${i===4?'<a href="#tracking" class="text-brand-700 font-bold text-sm hover:underline">Try tracker</a>':'<button data-quote data-service="'+s[0]+'" class="text-brand-700 font-bold text-sm hover:underline">Book now</button>'}</div></article>`).join('');
+
+// PLACEHOLDER testimonials: replace with real ones
+const reviews = [['JC','James Carter','CEO, Global TechCorp','Fast, reliable and professional international shipping.'],['SM','Sarah Miller','Operations Manager','Real-time tracking makes a huge difference for our business.'],['DW','David Wilson','Founder, Prime Exports','A responsive team that delivers on time.']];
+$('#reviews').innerHTML = reviews.map(r=>`<figure class="bg-slate-50 p-8 rounded-2xl border border-slate-200 flex flex-col justify-between"><blockquote class="text-slate-700 text-sm leading-relaxed">“${r[3]}”</blockquote><figcaption class="pt-6 mt-6 border-t border-slate-200 flex items-center space-x-4"><span class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center font-bold text-white text-sm" aria-hidden="true">${r[0]}</span><span><span class="block text-sm font-bold text-navy-950">${r[1]}</span><span class="block text-xs text-slate-600">${r[2]}</span></span></figcaption></figure>`).join('');
+
+const news = [['2026-05-12','Logistics','The Future of Global Shipping in 2026','Emerging trends in maritime routes, green fuels and automated ports.','photo-1559136555-9303baea8ebd','Container ship at sea'],['2026-05-08','Business','How to Reduce Shipping Costs for Your Business','Tips on container consolidation, inventory buffering and routing.','photo-1519003722824-194d4455a60c','Truck carrying a container'],['2026-04-28','Shipping','Air Freight vs Sea Freight: Which Is Better?','Transit times, costs and cargo types compared.','photo-1436491865332-7a61a109cc05','Cargo aircraft at an airport']];
+$('#news').innerHTML = news.map(n=>`<article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition border border-slate-200"><img loading="lazy" width="600" height="192" src="https://images.unsplash.com/${n[4]}?auto=format&fit=crop&w=600&q=70" alt="${n[5]}" class="h-48 w-full object-cover"><div class="p-6 space-y-3"><div class="flex items-center space-x-4 text-xs text-slate-600"><time datetime="${n[0]}">${new Date(n[0]).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</time><span class="bg-brand/10 text-brand-700 px-2.5 py-0.5 rounded-md font-semibold">${n[1]}</span></div><h3 class="text-lg font-bold text-navy-950">${n[2]}</h3><p class="text-slate-600 text-xs leading-relaxed">${n[3]}</p></div></article>`).join('');
+
+/* ---------- Mobile menu ---------- */
+const menuBtn = $('#menu-btn'), mobileMenu = $('#mobile-menu');
+menuBtn.addEventListener('click', () => { const open = mobileMenu.classList.toggle('hidden') === false; menuBtn.setAttribute('aria-expanded', open); });
+$$('a', mobileMenu).forEach(a => a.addEventListener('click', () => { mobileMenu.classList.add('hidden'); menuBtn.setAttribute('aria-expanded','false'); }));
+
+/* ---------- Active nav highlighting ---------- */
+const navLinks = $$('[data-nav]');
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) navLinks.forEach(l => l.classList.toggle('text-brand-700', l.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
+$$('section[id], footer[id]').forEach(s => io.observe(s));
+
+/* ---------- Tracking (mock data; replace with an API call) ---------- */
+const day = n => { const d = new Date(); d.setDate(d.getDate() + n); return d; };
+const fmt = d => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+const shipments = {
+  'KT-8942-X': { status: 'In transit', eta: day(6), steps: [['Shipment picked up','Shanghai Central Cargo Terminal',-5,'done'],['Customs clearance passed','Port of departure, China',-4,'done'],['In transit on ocean vessel','Pacific maritime route',-3,'current'],['Final port arrival & delivery','Port of Los Angeles, USA',6,'todo']] },
+  'KT-1001-A': { status: 'Delivered', eta: day(-3), steps: [['Shipment picked up','Rotterdam Terminal',-12,'done'],['Customs clearance passed','Port of Rotterdam',-11,'done'],['In transit by road','EU corridor',-8,'done'],['Delivered','Hamburg, Germany',-3,'done']] }
+};
+const icon = s => s==='done' ? '<span class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 text-xs"><i class="fa-solid fa-check" aria-hidden="true"></i></span>'
+  : s==='current' ? '<span class="relative w-8 h-8 shrink-0"><span class="absolute inset-0 rounded-full bg-brand animate-ping opacity-60"></span><span class="relative w-8 h-8 rounded-full bg-brand flex items-center justify-center text-xs"><i class="fa-solid fa-ship" aria-hidden="true"></i></span></span>'
+  : '<span class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 flex items-center justify-center shrink-0 text-xs"><i class="fa-solid fa-circle" aria-hidden="true"></i></span>';
+function trackShipment(raw) {
+  const id = raw.trim().toUpperCase(), box = $('#track-result'), d = shipments[id];
+  if (!id) { box.innerHTML = '<p class="text-sm text-slate-300">Enter a tracking ID to see its status.</p>'; return; }
+  if (!d) { box.innerHTML = `<p class="text-sm"><span class="font-mono font-bold">${id.replace(/[<>&"]/g,'')}</span> was not found. Check the ID and try again.</p>`; return; }
+  const delivered = d.status === 'Delivered';
+  box.innerHTML = `<div class="flex flex-col sm:flex-row justify-between pb-6 border-b border-slate-800 gap-4"><div><div class="text-xs text-slate-300">Tracking number</div><div class="text-xl font-mono font-bold">${id}</div></div>
+   <div class="flex gap-6"><div><div class="text-xs text-slate-300">Status</div><div class="text-sm font-bold ${delivered?'text-sky-300':'text-emerald-300'} mt-0.5">${d.status}</div></div><div><div class="text-xs text-slate-300">${delivered?'Delivered on':'Estimated delivery'}</div><div class="text-sm font-bold mt-0.5">${fmt(d.eta)}</div></div></div></div>
+   <ol class="space-y-6 relative pt-6 before:absolute before:top-10 before:bottom-4 before:left-4 before:w-0.5 before:bg-slate-800">${d.steps.map(s=>`<li class="relative flex items-start space-x-4 z-10">${icon(s[3])}<div><div class="text-xs ${s[3]==='current'?'text-brand-400 font-bold':'text-slate-300'}">${fmt(day(s[2]))}${s[3]==='current'?' (current)':s[3]==='todo'?' (scheduled)':''}</div><div class="text-sm font-bold ${s[3]==='todo'?'text-slate-300':''}">${s[0]}</div><div class="text-xs text-slate-300">${s[1]}</div></div></li>`).join('')}</ol>`;
+}
+$('#track-form').addEventListener('submit', e => { e.preventDefault(); trackShipment($('#tracking-input').value); });
+$$('[data-demo]').forEach(b => b.addEventListener('click', () => { $('#tracking-input').value = b.dataset.demo; trackShipment(b.dataset.demo); }));
+trackShipment('KT-8942-X');
+
+/* ---------- Quote modal ---------- */
+const modal = $('#quote-modal'); let lastFocus = null;
+function openQuoteModal(service) {
+  lastFocus = document.activeElement;
+  $('#quote-form-wrap').classList.remove('hidden'); $('#quote-success').classList.add('hidden'); $('#quote-error').classList.add('hidden');
+  if (service) $('#q-service').value = service;
+  modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden';
+  $('#q-origin').focus();
+}
+function closeQuoteModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+document.addEventListener('click', e => { const b = e.target.closest('[data-quote]'); if (b) openQuoteModal(b.dataset.service); });
+$('#modal-close').addEventListener('click', closeQuoteModal);
+$('#success-close').addEventListener('click', closeQuoteModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeQuoteModal(); });
+document.addEventListener('keydown', e => {
+  if (modal.classList.contains('hidden')) return;
+  if (e.key === 'Escape') return closeQuoteModal();
+  if (e.key === 'Tab') { // focus trap
+    const f = $$('button, input, select, a[href]', modal).filter(x => !x.closest('.hidden') && !x.disabled);
+    if (!f.length) return; const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+});
+$('#quote-form').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.target, btn = $('#quote-submit'), err = $('#quote-error');
+  err.classList.add('hidden'); btn.disabled = true; btn.textContent = 'Sending...';
+  try {
+    const res = await fetch(form.dataset.endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) });
+    if (!res.ok) throw new Error(res.status);
+    form.reset(); $('#quote-form-wrap').classList.add('hidden'); $('#quote-success').classList.remove('hidden'); $('#quote-success').focus();
+  } catch (_) { err.classList.remove('hidden'); }
+  finally { btn.disabled = false; btn.textContent = 'Send quote request'; }
+});
+</script>
+</body>
+</html>
